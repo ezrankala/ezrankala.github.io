@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Cookie&family=Didact+Gothic&family=IBM+Plex+Mono:wght@100&family=Maven+Pro&family=Patrick+Hand&family=Square+Peg&display=swap");
+/*
+Guide source for media queries breakpoints
+https://www.lambdatest.com/blog/how-to-use-css-breakpoints-for-responsive-design/
+https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+*/
+/* main body  for Laptops and Larger Screens*/
+@media screen and (min-width: 769px) {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(255, 255, 255, 0.71);
+    display: grid;
+    grid-template-rows: 65px 280px 65px;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 5px;
+    grid-template-areas: "header     header" "side       main" "footer     footer";
+  }
+  body header {
+    /* Header settings styles*/
+    grid-area: 1/1/2/3;
+    font-family: "Square Peg";
+    background-image: linear-gradient(180deg, rgba(40, 90, 180, 0.9) 30%, rgba(250, 215, 73, 0.9));
+  }
+  body header #name {
+    float: left;
+    margin-left: 1em;
+  }
+  body header nav {
+    /* Navigation/Socials styles*/
+    float: right;
+    font-size: .8em;
+    display: flex;
+    justify-content: center;
+  }
+  body header nav .blog, body header nav .projects, body header nav .interests, body header nav .contacts, body header nav .resume {
+    display: block;
+    border: 1px solid #9faff040;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: 1.5em 1em 0 0;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: "Didact Gothic";
+    letter-spacing: 0.082em;
+  }
+  body header nav .blog:hover, body header nav .projects:hover, body header nav .interests:hover, body header nav .contacts:hover, body header nav .resume:hover {
+    background-color: #96b0ce;
+    color: black;
+    border-color: #b1b1da;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.152em;
+  }
+  body header nav .interests ul {
+    display: none;
+  }
+  body #sidepage {
+    /* Side page style*/
+    grid-area: 2/1/3/2;
+    place-items: start;
+  }
+  body #sidepage img {
+    width: 200px;
+    margin: 20px 0 0 0;
+    border-radius: 50%;
+  }
+  body #main {
+    /*Styles for the main section of the page*/
+    grid-area: 2/2/3/-1;
+    height: auto;
+    font-family: "Didact Gothic";
+  }
+  body #main p {
+    padding-left: 10px;
+  }
+  body #main p a {
+    text-decoration: none;
+    color: #6b0606;
+  }
+  body #main p a:hover {
+    background-color: rgba(236, 221, 221, 0.9);
+  }
+  body #main p a:visited {
+    color: black;
+  }
+  body #main p a:active {
+    color: #770505;
+  }
+  body #main #about {
+    font-family: "Didact Gothic";
+  }
+  body #main #projects {
+    font-family: 'Gill Sans','IBM Plex Mono', monospace,   Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body #footer {
+    /*Footer Styles*/
+    grid-area: 3/1/-1/-1;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 45px 20px;
+    grid-template-columns: auto;
+    grid-template-areas: "socials" "copyright";
+  }
+  body #footer ul {
+    /* order of socials*/
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  body #footer ul li {
+    display: flex;
+    padding: .1em .5em;
+  }
+  body #footer ul li img {
+    height: 20px;
+    width: 20px;
+  }
+  body #footer #copyright {
+    grid-area: 2/1/3/2;
+  }
+  body #footer #copyright img {
+    height: 1em;
+    width: auto;
+    position: relative;
+    top: .2em;
+  }
+}
+/*Main body for mobile devices*/
+@media screen and (max-width: 480px) {
+  body {
+    margin: 2% 3% 0 3%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.71);
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace, 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body #header_name {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-family: 'Square Peg';
+    font-size: 2em;
+    background-image: linear-gradient(180deg, rgba(40, 90, 180, 0.9) 30%, rgba(250, 215, 73, 0.9));
+    height: 50%;
+    height: 80px;
+  }
+  body #header_name #name {
+    display: block;
+    text-align: center;
+    font-size: 100%;
+    font-weight: normal;
+    position: relative;
+    font-family: 'Square Peg';
+    margin-top: -1em;
+  }
+  body nav {
+    display: none;
+  }
+  body #sidepage {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  body #sidepage img {
+    width: 70%;
+    border-radius: 130px;
+    margin: 5%;
+  }
+  body main {
+    display: block;
+    font-family: "Didact Gothic";
+  }
+  body main p {
+    display: grid;
+    place-items: center;
+  }
+  body main p a {
+    text-decoration: none;
+    color: #6b0606;
+  }
+  body main p a:hover {
+    background-color: rgba(236, 221, 221, 0.9);
+  }
+  body main p a:visited {
+    color: black;
+  }
+  body main p a:active {
+    color: #770505;
+  }
+  body #footer {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 45px 20px;
+    grid-template-columns: auto;
+  }
+  body #footer ul {
+    /* order of socials*/
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  body #footer ul li {
+    display: flex;
+    padding: .1em .5em;
+  }
+  body #footer ul li img {
+    height: 20px;
+    width: 20px;
+  }
+  body #footer #copyright {
+    grid-area: 2/1/3/2;
+    font-family: 'Gill Sans','IBM Plex Mono', monospace,   Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body #footer #copyright img {
+    height: 1em;
+    width: auto;
+    position: relative;
+    top: .2em;
+  }
+}
+/*Tablets*/
+@media screen and (max-width: 768px) {
+  body {
+    margin: 2% 3% 0 3%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.71);
+    font-size: 16px;
+    font-family: 'IBM Plex Mono', monospace, 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body #header_name {
+    width: 100%;
+    font-family: 'Square Peg';
+    font-size: 2em;
+    background-image: linear-gradient(180deg, rgba(40, 90, 180, 0.9) 30%, rgba(250, 215, 73, 0.9));
+    height: 80px;
+    display: grid;
+    place-items: center;
+  }
+  body #header_name #name {
+    display: block;
+    text-align: center;
+    font-size: 100%;
+    font-weight: normal;
+    position: relative;
+    font-family: 'Square Peg';
+    margin-top: -1em;
+  }
+  body nav {
+    display: none;
+  }
+  body #sidepage {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  body #sidepage img {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+  }
+  body main #about {
+    display: block;
+    font-family: "Didact Gothic";
+  }
+  body main #about p {
+    display: grid;
+    place-items: center;
+  }
+  body main #about p a {
+    text-decoration: none;
+    color: #6b0606;
+  }
+  body main #about p a:hover {
+    background-color: rgba(236, 221, 221, 0.9);
+  }
+  body main #about p a:visited {
+    color: black;
+  }
+  body main #about p a:active {
+    color: #770505;
+  }
+  body #footer {
+    display: block;
+    display: grid;
+    place-items: center;
+  }
+  body #footer ul {
+    /* order of socials*/
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  body #footer ul li {
+    display: flex;
+    padding: .1em .5em;
+  }
+  body #footer ul li img {
+    height: 20px;
+    width: 20px;
+  }
+  body #footer #copyright img {
+    height: 1em;
+    width: auto;
+    position: relative;
+    top: .2em;
+  }
+}
+
+/*# sourceMappingURL=mainstyle.css.map */

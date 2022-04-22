@@ -1,0 +1,26 @@
+<p>My interests in education and beyond are in the -ogy(ies) types of knowledge</p>
+        <ul>
+            <li>Sociology</li>
+            
+            
+            <li>Psychology</li>
+            
+            
+            <li>Education</li>
+            
+            
+            <li>Economics</li>
+            
+            
+            <li>Mathematics</li>
+            
+            
+            <li>Computer Science</li>
+            
+            
+            <li>Astronomy</li>
+            
+            
+            <li>Theology</li>
+            
+        </ul>

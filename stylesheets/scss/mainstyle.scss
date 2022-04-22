@@ -1,0 +1,393 @@
+//imports
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Cookie&family=Didact+Gothic&family=IBM+Plex+Mono:wght@100&family=Maven+Pro&family=Patrick+Hand&family=Square+Peg&display=swap');
+// Variables
+// Colors
+$mainColor: rgba(255, 255, 255, 0.71);
+
+// Font from Google
+@mixin gFonts{
+    font-family: 'Barlow Condensed', 'Cookie', 'Didact Gothic', 'IBM Plex Mono', monospace, 'Maven Pro', 'Patrick Hand', cursive, 'Square Peg', sans-serif;
+}
+
+//Breakpoints for media queries
+/*
+Guide source for media queries breakpoints
+https://www.lambdatest.com/blog/how-to-use-css-breakpoints-for-responsive-design/
+https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
+*/
+
+$mobileDevice: "screen and (max-width: 480px)";
+$tabletDevice: "screen and (max-width: 768px)";
+$laptopDevices: "screen and (min-width: 769px)";
+
+
+//Mixins
+@mixin centering_items {
+    display: grid;
+    place-items: center;    
+}
+
+@mixin mainFont{
+    //Title and heading font
+    font-family:  'IBM Plex Mono', monospace, 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@mixin contentFont{
+    //Content font
+    font-family:  'Gill Sans','IBM Plex Mono', monospace,   Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@mixin iconSizing{
+    height: 20px;
+    width: 20px;
+}
+
+@mixin footerArrangement{
+    ul{    
+        /* order of socials*/ 
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        li{
+            display: flex;
+            padding: .1em .5em;
+
+            img{
+                @include iconSizing();
+            }
+        }
+    }
+}
+
+@mixin navigationArrangements{
+    display: block;
+    border: 1px solid #9faff040;
+    border-radius: .5em;
+    padding: .5em 1em;
+    margin: 1.5em 1em 0 0;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: "Didact Gothic";
+    letter-spacing: 0.082em;
+
+    &:hover{
+        background-color: rgb(150, 176, 206);
+        color: black;
+        border-color: rgb(177, 177, 218);
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 0.152em;
+    }
+}
+
+
+
+
+/* main body  for Laptops and Larger Screens*/ 
+
+@media #{$laptopDevices} {
+    
+
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: $mainColor; 
+    display: grid;
+    grid-template-rows: 65px 280px 65px;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "header     header"
+    "side       main"
+    "footer     footer";
+
+    header  {
+        /* Header settings styles*/
+        grid-area: 1/1/2/3;
+        font-family: 'Square Peg' ;
+        // font-size: 1.5em;
+        background-image: linear-gradient(180deg, rgba(40, 90, 180, .9) 30%, rgba(250, 215, 73, .9 ));
+
+       
+        #name{
+            float: left;
+            margin-left: 1em;
+        }
+    
+
+        nav{
+            /* Navigation/Socials styles*/  
+            // @include mainFont();
+            float: right;
+            font-size: .8em;
+            display: flex;
+            justify-content: center;
+
+            .blog, .projects,.interests, .contacts, .resume{
+                @include navigationArrangements();
+            }
+
+            .interests{
+                ul{
+                    display: none;
+                }
+            }
+
+        }
+    }
+    
+        #sidepage{
+        /* Side page style*/
+        grid-area: 2/1/3/2;
+        place-items: start;
+        
+
+        img{
+            width: 200px;
+            margin: 20px 0 0 0;
+            border-radius: 50%;
+        }
+    }
+
+    #main{
+        /*Styles for the main section of the page*/ 
+        grid-area: 2/2/3/-1;
+        height: auto;
+        font-family: "Didact Gothic";
+        p{
+            padding-left: 10px;
+
+            a{
+                text-decoration: none;
+                color: rgb(107, 6, 6);
+                &:hover{
+                    background-color: rgba(236, 221, 221, 0.9);
+                }
+                &:visited{
+                    color: black
+                }
+                &:active{
+                    color: rgb(119, 5, 5);
+                }
+            }
+        }
+
+        
+        #about{
+            font-family: "Didact Gothic";
+        }
+        #projects{
+            @include contentFont();
+        }
+        
+    }
+    #footer{
+        /*Footer Styles*/ 
+        grid-area: 3/1/-1/-1; //footer
+        @include centering_items();
+        @include footerArrangement();
+        grid-template-rows: 45px 20px;
+        grid-template-columns: auto;
+        grid-template-areas: "socials" 
+                            "copyright";
+        #copyright{
+            // @include contentFont();
+            grid-area: 2/1/3/2;
+            img{
+                height: 1em;
+                width: auto;
+                position: relative;
+                top: .2em;
+            }
+        }
+    }
+}
+}
+
+
+/*Main body for mobile devices*/
+
+@media #{$mobileDevice}{
+    body{
+    margin: 2% 3% 0 3%;
+    display: block; 
+    background-color: $mainColor;
+    font-size: 16px;
+    @include mainFont();
+
+        #header_name{
+            width: 100%;
+            display: grid;
+            place-items: center;
+            font-family: 'Square Peg';
+            font-size: 2em;
+            background-image: linear-gradient(180deg, rgba(40, 90, 180, .9) 30%, rgba(250, 215, 73, .9 ));
+            height: 50%;
+            height: 80px;
+
+
+            #name{
+                display: block;
+                text-align: center;
+                font-size: 100%;
+                font-weight: normal;
+                position: relative;
+                font-family: 'Square Peg';
+                margin-top: -1em;
+            }
+        }
+
+        nav{
+            display: none;
+
+        }
+
+        #sidepage{                
+            position: relative;
+            max-width: 100%;
+            @include centering_items();
+            img{
+                width: 70%;
+                border-radius: 130px;
+                margin: 5%;
+                
+            }
+
+        }
+        main{
+            display: block;
+            font-family: "Didact Gothic";
+            p{
+                @include centering_items();
+
+                a{
+                    text-decoration: none;
+                    color: rgb(107, 6, 6);
+                    &:hover{
+                        background-color: rgba(236, 221, 221, 0.9);
+                    }
+                    &:visited{
+                        color: black
+                    }
+                    &:active{
+                        color: rgb(119, 5, 5);
+                    }
+                }
+            }
+        }
+
+        #footer{
+            @include centering_items();
+            grid-template-rows: 45px 20px;
+            grid-template-columns: auto;
+            // grid-area: 1/1/2/2;
+            @include footerArrangement();
+
+            #copyright{
+                grid-area: 2/1/3/2;
+                @include contentFont();
+                img{
+                    height: 1em;
+                    width: auto;
+                    position: relative;
+                    top: .2em;
+                }
+            }
+        }
+    }
+
+}
+
+
+/*Tablets*/
+@media #{$tabletDevice}{
+    body{
+        margin: 2% 3% 0 3%;
+        display: block; 
+        background-color: $mainColor;
+        font-size: 16px;
+        @include mainFont();
+    
+            #header_name{
+                width: 100%;
+                font-family: 'Square Peg';
+                font-size: 2em;
+                background-image: linear-gradient(180deg, rgba(40, 90, 180, .9) 30%, rgba(250, 215, 73, .9 ));
+                height: 80px;
+                @include centering_items();
+    
+    
+                #name{
+                    display: block;
+                    text-align: center;
+                    font-size: 100%;
+                    font-weight: normal;
+                    position: relative;
+                    font-family: 'Square Peg';
+                    margin-top: -1em;
+                }
+            }
+    
+            nav{
+                display: none;
+    
+            }
+    
+            #sidepage{
+                position: relative;
+                max-width: 100%;
+                @include centering_items();
+                img{
+                    @include centering_items();
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    margin: 5%;
+                    
+                }
+    
+            }
+            main{
+                // clear: left;
+                #about{
+                display: block;
+                font-family: "Didact Gothic";
+                p{
+                    @include centering_items();
+    
+                    a{
+                        text-decoration: none;
+                        color: rgb(107, 6, 6);
+                        &:hover{
+                            background-color: rgba(236, 221, 221, 0.9);
+                        }
+                        &:visited{
+                            color: black
+                        }
+                        &:active{
+                            color: rgb(119, 5, 5);
+                        }
+                    }
+                }
+            }
+            }
+    
+            #footer{
+                display: block;
+                @include centering_items();
+                @include footerArrangement();
+    
+                #copyright{
+                    img{
+                        height: 1em;
+                        width: auto;
+                        position: relative;
+                        top: .2em;
+                    }
+                }
+            }
+        }
+
+}
