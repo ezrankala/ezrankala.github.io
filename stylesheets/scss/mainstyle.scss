@@ -127,6 +127,10 @@ body{
 
             .blog, .projects,.interests, .contacts, .resume{
                 @include navigationArrangements();
+                a{
+                    color: aliceblue;
+                    text-decoration: none;
+                }
             }
 
             .interests{

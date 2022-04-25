@@ -53,6 +53,10 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     font-weight: bold;
     letter-spacing: 0.152em;
   }
+  body header nav .blog a, body header nav .projects a, body header nav .interests a, body header nav .contacts a, body header nav .resume a {
+    color: aliceblue;
+    text-decoration: none;
+  }
   body header nav .interests ul {
     display: none;
   }
