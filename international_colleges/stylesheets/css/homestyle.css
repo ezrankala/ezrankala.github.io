@@ -1,0 +1,48 @@
+body {
+  color: black;
+  margin: 5px 0 0 0;
+  padding: 0;
+  background-color: honeydew;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e121e;
+}
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+body .sidebar {
+  position: fixed;
+  background-color: khaki;
+  transition: width 700ms cubic-bezier(0.86, 0, 0.07, 1);
+  overflow: scroll;
+  width: 7rem;
+}
+body .sidebar:hover {
+  width: 15rem;
+}
+body .sidebar h1 > a > img {
+  height: 4rem;
+  left: 20px;
+  position: sticky;
+}
+body .sidebar ul.requirements_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+body .sidebar ul.requirements_list li > a > img {
+  height: 4rem;
+}
+body .main {
+  margin-left: 7rem;
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=homestyle.css.map */
