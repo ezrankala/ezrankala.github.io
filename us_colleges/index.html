@@ -22,31 +22,30 @@
             </a>
         </h1>
         <ul class="requirements_list">
-            <li class="requirement_item1">
-                <a href="reqs/tests.html"><img src="images/testing.svg" alt="Testing requirements"></a>
-                </li>
-            <li class="requirement_item2">
-                <a href="reqs/recs.html"><img src="images/grades.svg" alt="Transcripts requirements"></a>
+            <li class="requirement_item1" id="test_req">
+                <a href="#standardized_tests"><img src="images/testing.svg" alt="Testing requirements"></a>
                 </li>
             <li class="requirement_item3">
-                <a href="reqs/grades.html"><img src="images/grades.svg" alt=" School Grades"></a>
+                <a href="#grades_req"><img src="images/grades.svg" alt=" School Grades"></a>
                 </li>
             <li class="requirement_item4">
-                <a href="reqs/essays.html"><img src="images/letter.svg" alt="Essays"></a>
+                <a href="#essays_req"><img src="images/letter.svg" alt="Essays"></a>
                 </li>
             <li class="requirement_item5">
-                <a href="reqs/extras.html"><img src="images/extras.svg" alt="Extra-curriculars"></a>
+                <a href="#extras_req"><img src="images/extras.svg" alt="Extra-curriculars"></a>
                 </li>
             <li class="requirement_item6">
-                <a href="reqs/recs.html"><img src="images/letter.svg" alt="Recomendations"></a>
+                <a href="#letters_of_rec"><img src="images/letter.svg" alt="Recomendations"></a>
                 </li>
             <li class="requirement_item7">
-                <a href="reqs/interviews.html"><img src="images/interview.svg" alt="Interviews"></a>
+                <a href="#interview_req"><img src="images/interview.svg" alt="Interviews"></a>
                 </li>
             <li class="requirement_item8">
-                <a href="reqs/fa.html"><img src="images/money.svg" alt="Financial Aid"></a>
+                <a href="#fa_req"><img src="images/money.svg" alt="Financial Aid"></a>
                 </li>
-            <li class="requirement_item9"> 
+
+            <!-- Hidden for a moment -->    
+            <li class="requirement_item9" style="display: none;"> 
                 <a href="reqs/faq.html"><img src="images/qns.svg" alt="Frequently Asked Questions"></a>
                  </li>
         </ul>
@@ -56,7 +55,7 @@
     <main class="main">
         <h1>Applying to US universities</h1>
 
-        <h2 class="tests">Testing</h2>
+        <h2 class="tests" id="standardized_tests"> Testing</h2>
             <div class="tests_description">
                     <p>
                         These can be divided into there
@@ -110,7 +109,7 @@
                     </p>
             </div>
 
-        <h2 class="grades">Grades and Transcripts</h2>
+        <h2 class="grades" id="grades_req">Grades and Transcripts</h2>
             <div class="grade_desscription">
                 <p>
                     You'll need school transcript for at least the last two years of highschool
@@ -132,7 +131,7 @@
                 </p>
             </div>
 
-        <h2 class="essays">Essays</h2>
+        <h2 class="essays" id="essays_req">Essays</h2>
             <div class="essay_description">
                 <p>
                     They are a <em> key and central part of your application</em>. 
@@ -153,34 +152,72 @@
                 </p>
             </div>
         
-        <h2 class="extras">Extra-curriculars</h2>
-        <!-- Unfinished -->
+        <h2 class="extras" id="extras_req">Extra-curriculars</h2>
+       
             <div class="extras_description">
                 <p>
-                    	Activities that a student does to supplement his or her academics in the process of being a “well rounded student”.
-                    	Advisably, the range and mix of activities can be;
-                    	Services – Any thing related to giving (leadership, mentoring, charity, volunteering and many others)
-                    	Creativity – Centered on self growth. Includes singing, debating, researches that are not in the school’s syllabus system, artworks (drawings, paintings), Programming.
-                    	Action/Sports – Physical endurance activities. Includes soccer, basketball, track and field, tennis, volleyball and many others
-                    	Initiatives – Starting up something on your own (a daring attempt as such would set a difference to standout as an applicant). It may be a club at school, a business, a tuition center, a website or blog , a non profit or for profit organization. It can be on any range (as small as a school, as large as a town or country network
-                    	Jobs – If you have ever had a job whose experience has been significant to your life.
-
+                    Activities that a student does to supplement thier academics 
+                    in the process of being a “well rounded student”.
+                    <br>
+                    Advisably, the range and mix of activities can be;
+                    <dl>
+                        <dt>Services</dt>
+                            <dl>Any thing related to giving (leadership, mentoring, charity,
+                                 volunteering and many others)
+                                </dl>
+                        
+                        <dt>Creativity</dt>
+                            <dl>Centered on self growth. Includes singing, debating, 
+                                researches that are not in the school’s syllabus system, 
+                                artworks (drawings, paintings), Programming.
+                            </dl>
+                        
+                        <dt>Action/Sports</dt>
+                            <dl>Physical endurance activities. Includes soccer, basketball, 
+                                track and field, tennis, volleyball and many others
+                            </dl>
+                        
+                        <dt>Initiatives </dt>
+                            <dl>Starting up something on your own (a daring attempt as such 
+                                would set a difference to standout as an applicant). 
+                                It may be a club at school, a business, a tuition center, 
+                                a website or blog , a non profit or for profit organization.
+                                 It can be on any range (as small as a school, as large as
+                                  a town or country network
+                                </dl>
+            
+                        <dt>Jobs </dt>
+                            <dl>If you have ever had a job whose experience has been 
+                                significant to your life.</dl>
+                    </dl>
                 </p>
+            
             </div>
         
-        <h2 class="recommendations">Letters of recommendations</h2>
-            <!-- Unfinished -->
+        <h2 class="recommendations" id="letters_of_rec">
+            Letters of recommendations</h2>
+           
             <div class="recs_description">
                 <p>
-                    •	These are letters which other people write about you. You may communicate with them what to share beforehand, but you can not have access to what they wrote about after they submit it
-                    •	You would require a minimum of 3 recommendation letters. At least 2 from your subject teachers and 1 from your college counselor
-                    •	It is advised to be a mix from different subject areas such as one letter from a Math/Science Teacher, and another letter from a Language/Humanities teacher!
-
+                    These are letters which other people write about you. 
+                    <br>
+                    You may and should communicate with them what to share 
+                    beforehand, but you can not have access to what they 
+                    write about after they submit it
+                    <br>
+                    You would often require a minimum of 2 recommendation letters. 
+                    Atleast one from two subject teachers and one from your college 
+                    counselor
+                    <br>
+                    It is advised to be a mix from different subject areas 
+                    such as one letter from a Math/Science Teacher, 
+                    and another letter from a Language/Humanities teacher!
+            
                 </p>
             </div>
         
-        <h2 class="interviews">Interviews</h2>
-        <!-- Unfinished -->
+        <h2 class="interviews" id="interview_req">Interviews</h2>
+       
             <div class="interview_description">
                 <p>
                     •	They are arranged by the admission offices
@@ -192,42 +229,72 @@
                 </p>
             </div>
 
-        <h2 class="finances">Financial Aid</h2>
-        <!-- Unfinished -->
-            <div class="fa_description">
-                <p>
-                    •	Applying for financial Aid for international students is often done via the CSS (College Scholarship Service) profile on the college board website.
-                    •	Every financial Aid applicant will require to submit a copy of tax forms of two years before. For example if you are applying for financial Aid for the year 2020/21, you need to have your parents full annual tax forms for the year 2018. Sometimes these can be a letter from a parents employer
-                    indicating the Parents Annual incomes and taxes or Parent’s annual bank statement.
-                    •	Often top colleges offer enough aid to support your learning and whilst being fair to the applicant’s family. You may need to visit college specific websites and communicate with their offices of admissions on their Financial Aid policies and how much aid you can expect depending on your financial profile
-
-                </p>
-            </div>
-
-        <h2 class="questions">FAQs and Links</h2>
-        <!-- Unfinished -->
-            <div class="qns_description">
-
-                <p>
-                    •	For testing:
-                    	ACT – https://www.act.org/content/act/en.html#
-                    	SATs – https://www.collegeboard.org/
-                    	TOEFL – https://www.ets.org/toefl
-
-                    •	For testing practice and exam samples (in addition to the web links given)
-                    	https://www.khanacademy.org/sat - SAT
-                    	http://www.cracksat.net/index.html - SAT
-                    	http://www.crackact.com/ - ACT
-
-                    •	Essay and activity writing
-                    	https://www.collegeessayguy.com/
-                    	https://www.princetonreview.com/academic-tutoring/subjects/essay-writing
-                
-                    •	Financial Aid
-                    	https://cssprofile.collegeboard.org/
-                </p>
-            </div>
+        <h2 class="finances" id="fa_req"> Financial Aid</h2>
         
+        <div class="fa_description">
+            <p>
+               Applying for financial Aid for international students is
+                often done via the CSS (College Scholarship Service) 
+                profile on the college board website.
+               Every financial Aid applicant will require to submit some form of 
+               of income.
+               <br>
+               This can be as a 
+               <ul>
+                   <li> A copy of tax forms of two years before. 
+                       For example if you are applying for financial Aid 
+                       for the year 2022/23, you need to have your parents or guardian
+                        full annual tax forms for the year 2018. 
+                        These can be a letter from a parents employer
+                        indicating the Parents Annual incomes and taxes  or 
+                        
+                        Parent’s annual bank statement.
+    
+                        <!-- Samples statements -->
+                        <em>Samples needed here!</em>
+                        </li>
+                   <li>
+                    If one's parents or guardians are self employed, a copy of their
+                    bank statement or tax information are to be used!
+                   </li>
+               </ul>
+            </p>
+            
+            <p>
+               Often top colleges offer enough aid to support your learning and 
+               whilst being fair to the applicant’s family. 
+               You may need to visit college specific websites and communicate 
+               with their offices of admissions on their Financial Aid policies 
+               and how much aid you can expect depending on your financial profile
+            </p>
+        </div>
+
+        <!-- Unfinished -->
+        <div class = "faqs and links Unfinished" style="display: none;">
+            <h2 class="questions">FAQs and Links</h2>
+            
+                <div class="qns_description">
+
+                    <p>
+                        •	For testing:
+                        	ACT – https://www.act.org/content/act/en.html#
+                        	SATs – https://www.collegeboard.org/
+                        	TOEFL – https://www.ets.org/toefl
+
+                        •	For testing practice and exam samples (in addition to the web links given)
+                        	https://www.khanacademy.org/sat - SAT
+                        	http://www.cracksat.net/index.html - SAT
+                        	http://www.crackact.com/ - ACT
+
+                        •	Essay and activity writing
+                        	https://www.collegeessayguy.com/
+                        	https://www.princetonreview.com/academic-tutoring/subjects/essay-writing
+                    
+                        •	Financial Aid
+                        	https://cssprofile.collegeboard.org/
+                    </p>
+                </div>
+        </div>
     </main>
 
     <!-- ############# ----- FOOTER AREA ---------- ############# -->

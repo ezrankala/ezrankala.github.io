@@ -1,8 +1,11 @@
+/*Font import*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Cookie&family=Didact+Gothic&family=IBM+Plex+Mono:wght@100&family=Maven+Pro&family=Patrick+Hand&family=Square+Peg&display=swap");
 body {
   color: black;
   margin: 5px 0 0 0;
   padding: 0;
   background-color: honeydew;
+  font-family: 'Courier New', Courier, monospace;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;

@@ -1,13 +1,17 @@
 // Variables
 $pageFontSize: 16px;
-$pageFontFam: "Open Sans";
+$pageFontFam: 'Barlow Condensed', sans-serif,'Cookie', 'Didact Gothic','IBM Plex Mono', monospace   ,'Maven Pro', 'Patrick Hand','Square Peg', cursive;
 
+
+/*Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Cookie&family=Didact+Gothic&family=IBM+Plex+Mono:wght@100&family=Maven+Pro&family=Patrick+Hand&family=Square+Peg&display=swap');
 
 body{
     color:rgb(0, 0, 0);
     margin:5px 0 0 0;
     padding: 0;
     background-color: honeydew;
+    font-family: 'Courier New', Courier, monospace;
 
     &::-webkit-scrollbar{
         width:0.25rem;
