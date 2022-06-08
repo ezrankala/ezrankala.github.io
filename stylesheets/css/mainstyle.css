@@ -33,7 +33,7 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     display: flex;
     justify-content: center;
   }
-  body header nav .blog, body header nav .projects, body header nav .interests, body header nav .contacts, body header nav .resume {
+  body header nav .blog, body header nav .projects, body header nav .interests, body header nav .contacts, body header nav .resume, body header nav .gallery {
     display: block;
     border: 1px solid #9faff040;
     border-radius: .5em;
@@ -45,7 +45,7 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     font-family: "Didact Gothic";
     letter-spacing: 0.082em;
   }
-  body header nav .blog:hover, body header nav .projects:hover, body header nav .interests:hover, body header nav .contacts:hover, body header nav .resume:hover {
+  body header nav .blog:hover, body header nav .projects:hover, body header nav .interests:hover, body header nav .contacts:hover, body header nav .resume:hover, body header nav .gallery:hover {
     background-color: #96b0ce;
     color: black;
     border-color: #b1b1da;
@@ -53,7 +53,7 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     font-weight: bold;
     letter-spacing: 0.152em;
   }
-  body header nav .blog a, body header nav .blog a:active, body header nav .blog a:visited, body header nav .projects a, body header nav .projects a:active, body header nav .projects a:visited, body header nav .interests a, body header nav .interests a:active, body header nav .interests a:visited, body header nav .contacts a, body header nav .contacts a:active, body header nav .contacts a:visited, body header nav .resume a, body header nav .resume a:active, body header nav .resume a:visited {
+  body header nav .blog a, body header nav .blog a:active, body header nav .blog a:visited, body header nav .projects a, body header nav .projects a:active, body header nav .projects a:visited, body header nav .interests a, body header nav .interests a:active, body header nav .interests a:visited, body header nav .contacts a, body header nav .contacts a:active, body header nav .contacts a:visited, body header nav .resume a, body header nav .resume a:active, body header nav .resume a:visited, body header nav .gallery a, body header nav .gallery a:active, body header nav .gallery a:visited {
     color: aliceblue;
     text-decoration: none;
   }
@@ -144,7 +144,6 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     width: 100%;
     display: grid;
     place-items: center;
-    font-family: 'Square Peg';
     font-size: 2em;
     background-image: linear-gradient(180deg, rgba(40, 90, 180, 0.9) 30%, rgba(250, 215, 73, 0.9));
     height: 50%;
@@ -160,13 +159,15 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     margin-top: -1em;
   }
   body nav {
-    display: none;
+    display: block;
+    font-size: 70%;
   }
   body #sidepage {
     position: relative;
     max-width: 100%;
     display: grid;
     place-items: center;
+    display: none;
   }
   body #sidepage img {
     width: 70%;
@@ -176,6 +177,7 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
   body main {
     display: block;
     font-family: "Didact Gothic";
+    display: none;
   }
   body main p {
     display: grid;
@@ -199,6 +201,7 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
     place-items: center;
     grid-template-rows: 45px 20px;
     grid-template-columns: auto;
+    display: none;
   }
   body #footer ul {
     /* order of socials*/
@@ -217,97 +220,6 @@ https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-stan
   body #footer #copyright {
     grid-area: 2/1/3/2;
     font-family: 'Gill Sans','IBM Plex Mono', monospace,   Calibri, 'Trebuchet MS', sans-serif;
-  }
-  body #footer #copyright img {
-    height: 1em;
-    width: auto;
-    position: relative;
-    top: .2em;
-  }
-}
-/*Tablets*/
-@media screen and (max-width: 768px) {
-  body {
-    margin: 2% 3% 0 3%;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.71);
-    font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace, 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  body #header_name {
-    width: 100%;
-    font-family: 'Square Peg';
-    font-size: 2em;
-    background-image: linear-gradient(180deg, rgba(40, 90, 180, 0.9) 30%, rgba(250, 215, 73, 0.9));
-    height: 80px;
-    display: grid;
-    place-items: center;
-  }
-  body #header_name #name {
-    display: block;
-    text-align: center;
-    font-size: 100%;
-    font-weight: normal;
-    position: relative;
-    font-family: 'Square Peg';
-    margin-top: -1em;
-  }
-  body nav {
-    display: none;
-  }
-  body #sidepage {
-    position: relative;
-    max-width: 100%;
-    display: grid;
-    place-items: center;
-  }
-  body #sidepage img {
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin: 5%;
-  }
-  body main #about {
-    display: block;
-    font-family: "Didact Gothic";
-  }
-  body main #about p {
-    display: grid;
-    place-items: center;
-  }
-  body main #about p a {
-    text-decoration: none;
-    color: #6b0606;
-  }
-  body main #about p a:hover {
-    background-color: rgba(236, 221, 221, 0.9);
-  }
-  body main #about p a:visited {
-    color: black;
-  }
-  body main #about p a:active {
-    color: #770505;
-  }
-  body #footer {
-    display: block;
-    display: grid;
-    place-items: center;
-  }
-  body #footer ul {
-    /* order of socials*/
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-  }
-  body #footer ul li {
-    display: flex;
-    padding: .1em .5em;
-  }
-  body #footer ul li img {
-    height: 20px;
-    width: 20px;
   }
   body #footer #copyright img {
     height: 1em;
