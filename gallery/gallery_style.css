@@ -4,10 +4,8 @@
 }
 
 body{
-    /* display: grid;
-    place-items: center;
-    min-height: 100vh; */
     background-color: rgba(105, 105, 105, 0.308);
+    margin: 0 10% 0 10%;
 }
 
 h1{
