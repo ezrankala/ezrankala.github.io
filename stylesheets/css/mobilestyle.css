@@ -1,0 +1,113 @@
+/* Fonts from Google */
+@font-face {
+  font-family: 'alpha_g';
+  src: url("/fonts/Didact_Gothic/DidactGothic-Regular.ttf");
+}
+@font-face {
+  font-family: 'alpha_e';
+  src: url("/fonts/Square_Peg/SquarePeg-Regular.ttf");
+}
+body {
+  margin: 1% 10px 0 10px;
+  font-family: "Courier New", monospace, Calibri;
+  background-color: #d5f4d78c;
+}
+body a {
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+body a:hover {
+  color: brown;
+}
+body a:visited {
+  color: crimson;
+}
+body header.header-bar {
+  min-height: 80px;
+}
+body header.header-bar .branding {
+  font-size: 3rem;
+  font-family: alpha_e, alpha_g, "Courier New", monospace, Calibri;
+}
+body header.header-bar nav.nav-menu {
+  position: fixed;
+  left: 100%;
+  /* Have it come from the right */
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: #f2dd6be8;
+  text-align: left;
+  transition: 0.5s ease-in-out;
+}
+body header.header-bar .nav-menu.active {
+  left: 20vw;
+  /* Give it 50 percent of the right side of the screen*/
+}
+body header.header-bar ul.nav-items {
+  list-style-type: none;
+  margin: 16px 0;
+}
+body header.header-bar .hamburger {
+  display: block;
+  cursor: pointer;
+  left: 90%;
+  position: fixed;
+  top: 3%;
+}
+body header.header-bar .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+body header.header-bar .hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+body header.header-bar .hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+body header.header-bar span.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background-color: #df4040;
+}
+body #sidepage img {
+  width: 200px;
+  margin: 20px 0 0 0;
+  border-radius: 50%;
+}
+body #main {
+  height: 100px;
+}
+body #footer {
+  display: grid;
+  place-items: center;
+  grid-template-rows: 45px 20px;
+  grid-template-columns: auto;
+}
+body #footer ul {
+  /* order of socials*/
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+body #footer ul li {
+  padding: .1em .5em;
+}
+body #footer ul li img {
+  height: 20px;
+  width: 20px;
+}
+body #footer #copyright {
+  grid-area: 2/1/3/2;
+}
+body #footer #copyright img {
+  height: 1em;
+  width: auto;
+  position: relative;
+  top: .2em;
+}
+
+/*# sourceMappingURL=mobilestyle.css.map */

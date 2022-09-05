@@ -10,73 +10,85 @@
 
     
     <!-- StyleSheets -->
-    <link rel="stylesheet" href="stylesheets/css/mainstyle.css">
+    <link rel="stylesheet" href="stylesheets/css/mobilestyle.css">
 
     <!-- Imported Google Fonts -->
     <!-- @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Cookie&family=Didact+Gothic&family=IBM+Plex+Mono:wght@100&family=Maven+Pro&family=Patrick+Hand&family=Square+Peg&display=swap'); -->
 
 </head>
+
 <body>
     <!-- ######### HEADER ########## -->
     
-    <header id="header_name">
-        <div id="name"><h1>Ezra Nkala</h1></div>
-    
-        <nav>
-            <!-- Blog/Notion -->
-            <div class="blog" >Blog</div>
+    <header class="header-bar">
 
-            <!-- Projects -->
-            <div class="projects">
-                <a href="us_colleges/index.html">Projects</a>
+        <div class="branding"> 
+            <a class="header-branding" href="/">Ezra Nkala</a> 
+        </div>
+
+        <nav class="nav-menu" >
+            <ul class="nav-items">
+                <!-- Blog/Notion -->
+                <li class="blog" >Blog</li>
+
+                <!-- Projects -->
+                <li class="projects">
+                    <a href="us_colleges/index.html">Projects</a>
+                </li>
+
+                <!-- Interests -->
+                <li class="interests"> Interests
+                    <ul class="submenu">
+                        <div>Sociology</div>
+                        
+                        
+                        <div>Psychology</div>
+                        
+                        
+                        <div>Education</div>
+                        
+                        
+                        <div>Economics</div>
+                        
+                        
+                        <div>Mathematics</div>
+                        
+                        
+                        <div>Computer Science</div>
+                        
+                        
+                        <div>Astronomy</div>
+                        
+                        
+                        <div>Theology</div>
+                        
+                    </ul> 
+
+                </li>
+
+                <!-- Contact Information -->
+                <li class="contact">Contacts</li>
+
+                <!-- Resume from Google Pages -->
+                <li class="resume">
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vR3pELnSlzny1zRwexOA9vaOxt6Fnog171B7QX_5fbzMj8VbDX58WSz7BETBIg7qID2Lp_NTs2fKa5G/pub" 
+                        target="_blank" rel="noopener noreferrer" title="Open Resume on a new page">Resume
+                    </a>
+                </li>
+                
+                <!-- Gallery Uploads -->
+                <li class="gallery">
+                    <a href="gallery/gallery.html">Gallery</a>
+                </li>
+            </ul>
+
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
 
-            <!-- Interests -->
-            <div class="interests"> Interests
-                <!-- <button class="droplist_interest"> Interests
-                </button> -->
-                <ul class="droplist_content">
-                    <li>Sociology</li>
-                    
-                    
-                    <li>Psychology</li>
-                    
-                    
-                    <li>Education</li>
-                    
-                    
-                    <li>Economics</li>
-                    
-                    
-                    <li>Mathematics</li>
-                    
-                    
-                    <li>Computer Science</li>
-                    
-                    
-                    <li>Astronomy</li>
-                    
-                    
-                    <li>Theology</li>
-                    
-                </ul> 
-
-            </div>
-
-            <!-- Contact Information -->
-            <div class="contacts">Contacts</div>
-
-            <!-- Resume from Google Pages -->
-            <div class="resume">
-                <a href="https://docs.google.com/document/d/e/2PACX-1vR3pELnSlzny1zRwexOA9vaOxt6Fnog171B7QX_5fbzMj8VbDX58WSz7BETBIg7qID2Lp_NTs2fKa5G/pub" 
-                    target="_blank" rel="noopener noreferrer" title="Open Resume on a new page">Resume
-                </a>
-            </div>
-            
-            <!-- Gallery Uploads -->
-            <div class="gallery">
-                <a href="gallery/gallery.html">Gallery</a>
-            </div>
         </nav>
     </header>
 
@@ -106,7 +118,7 @@
         <ul class="socials">
             <li class="email">
                 <a href="mailto:ezrankala@cmu.edu" target="_blank" rel="noopener noreferrer">
-                <img src="images/icons/email_icon.svg" alt="email icon" title="email">
+                    <img src="images/icons/email_icon.svg" alt="email icon" title="email">
                 </a>
                 </li>
 
@@ -151,6 +163,8 @@
             <img src="images/icons/tanzania.svg" alt="Tanzanian Flag">
         </div>
     </footer>
+
+    <script src="/main.js"></script>
 </body>
 
 </html>

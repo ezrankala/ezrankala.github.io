@@ -1,0 +1,147 @@
+
+/* Fonts from Google */ 
+@font-face {
+    font-family: 'alpha_g';
+    src: url('/fonts/Didact_Gothic/DidactGothic-Regular.ttf');
+    }
+
+@font-face {
+    font-family: 'alpha_e';
+    src: url('/fonts/Square_Peg/SquarePeg-Regular.ttf');
+    }
+
+    //Mixins
+@mixin iconSizing{
+    height: 20px;
+    width: 20px;
+}
+
+@mixin footerArrangement{
+    ul{    
+        /* order of socials*/ 
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        li{
+            padding: .1em .5em; 
+            img{
+                @include iconSizing();
+            }
+        }
+    }
+}
+
+body{
+    margin: 1% 10px 0 10px ;
+    font-family: 'Courier New', monospace, Calibri ;
+    background-color:#d5f4d78c;
+    
+    a{
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    }
+    a:hover{
+        color: brown;
+    }
+
+    a:visited{
+        color: crimson;
+    }
+    header.header-bar{
+        min-height: 80px;
+        
+        .branding{
+            font-size: 3rem;
+            font-family: alpha_e, alpha_g,'Courier New', monospace, Calibri ;
+
+        }
+
+        nav.nav-menu{
+            position: fixed;
+            left: 100%;             /* Have it come from the right */
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            background-color: #f2dd6be8;
+            // width: 80vw;
+            text-align: left;
+            transition: 0.5s ease-in-out;
+        }
+
+        .nav-menu.active{
+            left: 20vw;         /* Give it 50 percent of the right side of the screen*/
+        }
+
+            ul.nav-items{
+                list-style-type: none;
+                margin: 16px 0;  
+                
+                li{
+                    
+                }
+            }
+
+            .hamburger{
+                display: block;
+                cursor: pointer;
+                left: 90%;
+                position: fixed;
+                top: 3%;
+            }
+            .hamburger.active .bar:nth-child(2){
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            span.bar{
+                display: block;
+                width: 25px;
+                height:  3px;
+                margin: 5px auto;
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                background-color: rgb(223, 64, 64);   
+            }
+        
+    }
+
+    #sidepage{
+        img{
+            width: 200px;
+            margin: 20px 0 0 0;
+            border-radius: 50%;
+        }
+        
+
+    }
+
+    #main{
+
+        height: 100px;
+
+    }
+
+    #footer{
+        display: grid;
+        place-items: center;
+        grid-template-rows: 45px 20px;
+        grid-template-columns: auto;
+        @include footerArrangement();
+
+        #copyright{
+            grid-area: 2/1/3/2;
+            img{
+                height: 1em;
+                width: auto;
+                position: relative;
+                top: .2em;
+            }
+        }
+    }
+}

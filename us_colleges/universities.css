@@ -1,0 +1,10 @@
+body{
+    background-color: azure;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+a{
+    text-decoration: none;
+}
