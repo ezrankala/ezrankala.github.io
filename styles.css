@@ -1,0 +1,340 @@
+:root {
+    /* Ubuntu Purple */
+    --ubuntu-purple: #E95420;
+    --ubuntu-purple-dark: #dd4814;
+    
+    /* Font Variables */
+    --primary-font: 'Segoe UI', sans-serif;
+    --mono-font: Courier, 'Courier New', monospace;
+    --current-font: var(--mono-font);
+    
+    /* Light mode */
+    --bg-color: #ffffff;
+    --text-color: #2d3436;
+    --surface-color: #f5f6fa;
+    
+    /* Dark mode */
+    --bg-color-dark: #4f0606;
+    --text-color-dark: #ffffff;
+    --surface-color-dark: #2d2d2d;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-color: var(--bg-color-dark);
+        --text-color: var(--text-color-dark);
+        --surface-color: var(--surface-color-dark);
+    }
+}
+
+[data-theme="dark"] {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --surface-color: var(--surface-color-dark);
+}
+
+[data-theme="light"] {
+    --bg-color: var(--bg-color);
+    --text-color: var(--text-color);
+    --surface-color: var(--surface-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--current-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.header {
+    background: var(--bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--ubuntu-purple);
+    text-decoration: none;
+    font-family: var(--current-font);
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+    font-family: var(--current-font);
+}
+
+.nav-list a:hover {
+    color: var(--ubuntu-purple);
+}
+
+.theme-switcher {
+    position: relative;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.sun { opacity: 0; }
+.moon { opacity: 1; }
+
+.hero {
+    text-align: center;
+    padding: 8rem 0 4rem;
+    background: var(--surface-color);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.section { padding: 4rem 0; }
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project-card h3 {
+    color: var(--ubuntu-purple);
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--ubuntu-purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--ubuntu-purple-dark);
+}
+
+.footer {
+    background: var(--ubuntu-purple);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+[data-theme="dark"] .sun { opacity: 1; }
+[data-theme="dark"] .moon { opacity: 0; }
+[data-theme="light"] .sun { opacity: 0; }
+[data-theme="light"] .moon { opacity: 1; }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Fixed Hamburger Icon */
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: black; /* Black in light mode */
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black; /* Black in light mode */
+    left: 0;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.hamburger::before { top: -6px; }
+.hamburger::after { top: 6px; }
+
+/* Dark mode adjustments for hamburger icon */
+[data-theme="dark"] .hamburger,
+[data-theme="dark"] .hamburger::before,
+[data-theme="dark"] .hamburger::after {
+    background: white; /* White in dark mode */
+}
+
+@media (max-width: 768px) {
+    .nav{
+        justify-content: flex-end;
+    }
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: auto;
+        right: 0;
+        background: var(--bg-color);
+        flex-direction: column;
+        padding: 1rem;
+        text-align: right;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 200px;
+    }
+
+    .nav-list.active { display: flex; }
+    .menu-toggle { display: block; order: 1;}
+    .theme-switcher { margin-right: 0.5rem; }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.socials li { transition: transform 0.3s ease; }
+.socials li:hover { transform: scale(1.1); }
+
+.socials img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+[data-theme="dark"] .socials img { filter: invert(1) brightness(0.9); }
+[data-theme="light"] .socials img { filter: invert(0) brightness(1); }
+
+.footer .font-switcher {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.font-toggle {
+    background: var(--surface-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.font-toggle:hover { transform: scale(1.1); }
+
+/* Dropdown Styles */
+.dropdown { position: relative; }
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--surface-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    min-width: 180px;
+    z-index: 1000;
+}
+
+.dropdown.active .dropdown-menu { display: block; }
+
+.dropdown-menu li { 
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+ }
+
+.dropdown-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    color: var(--ubuntu-purple);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+}

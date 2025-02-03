@@ -1,0 +1,89 @@
+/* Resource Cards with Collapsible Functionality */
+.resource-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Collapsible Trigger */
+.resource-card-trigger {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+    font-family: inherit; /* Ensures it uses the global font */
+}
+
+.resource-card-trigger:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.resource-card-trigger h2 {
+    color: var(--ubuntu-purple);
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* Collapsible Content */
+.resource-card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1.5rem;
+}
+
+.resource-card.active .resource-card-content {
+    padding: 1.5rem;
+    max-height: 2000px; /* Adjust based on content size */
+}
+
+/* Arrow Icon */
+.resource-card-arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+    margin-left: 1rem;
+    color: var(--text-color);
+}
+
+.resource-card.active .resource-card-arrow {
+    transform: rotate(180deg);
+}
+
+/* Content Styling */
+.resource-card-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.resource-card-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.resource-card-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resource-card-content a:hover {
+    color: var(--ubuntu-purple);
+}
+
+.resource-card-content h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--ubuntu-purple);
+    font-size: 1.1rem;
+}

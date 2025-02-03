@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezra Nkala</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JavaScript file with defer to load after HTML -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <!-- Logo linking to the homepage -->
+            <a href="#" class="logo">Ezra </a>
+
+            <!-- Theme switcher button -->
+            <div class="theme-switcher">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <!-- Icons for light and dark mode -->
+                    <img src="images/icons/sun.svg" class="icon sun" alt="Light mode">
+                    <img src="images/icons/moon.svg" class="icon moon" alt="Dark mode">
+                </button>
+            </div>
+
+            <!-- Navigation links -->
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <!-- Dropdown for additional pages -->
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">Explore ▼</a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/books.html">Books</a></li>
+                      <li><a href="/blog.html">Blog</a></li>
+                      <li><a href="/gallery.html">Gallery</a></li>
+                      <li><a href="/tools.html">Tools</a></li>
+                      <li><a href="pages/college_resources.html">College Resources</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main class="main">
+        <!-- Hero section with profile image and tagline -->
+        <section class="hero">
+            <div class="container">
+                <!-- Profile image -->
+                <img src="images/profile/profile_black_v0.png" alt="Ezra Nkala" class="profile-img">
+                <h1>Ezra Nkala</h1>
+                <p class="tagline">
+                    <!-- Tagline (currently empty) -->
+                </p>
+            </div>
+        </section>
+
+        <!-- About Me section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>
+                    I am just a boi right now. <br>
+                    I have a lot to learn 😉✨
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Alexandria card -->
+                    <div class="project-card">
+                        <h3>Project Alexandria</h3>
+                        <p>An innovative project aimed at creating a comprehensive digital library.</p>
+                        <!-- Link to project details page -->
+                        <a href="pages/college_resources.html" class="project-link">Learn More</a>
+                    </div>
+        
+                    <!-- Form Four Resources card -->
+                    <div class="project-card">
+                        <h3>Form Four Resources</h3>
+                        <p>Access a wide range of educational resources for Form Four students.</p>
+                        <!-- External link to Form Four resources -->
+                        <a href="https://maktaba.tetea.org/" target="_blank" class="project-link">Visit Resources</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contacts</h2>
+                <!-- Social media icons grid -->
+                <ul class="socials">
+                    <!-- Email -->
+                    <li class="email">
+                        <a href="mailto:ezrankala73@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/email_icon.svg" alt="email icon" title="email">
+                        </a>
+                    </li>
+                    <!-- Twitter -->
+                    <li class="twitter">
+                        <a href="https://twitter.com/cornel_ez" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/twitter_icon2.svg" alt="twitter icon" title="twitter">
+                        </a>
+                    </li>
+                    <!-- GitHub -->
+                    <li class="github">
+                        <a href="https://github.com/ezrankala" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/github_icon2.svg" alt="github icon" title="github">
+                        </a>
+                    </li>
+                    <!-- HackerRank -->
+                    <li class="hackerank">
+                        <a href="https://www.hackerrank.com/ezracnkala?hr_r=1" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/hackerrank_icon2.svg" alt="hackerank icon" title="hackerrank">
+                        </a>
+                    </li>
+                    <!-- Reddit -->
+                    <li class="reddit">
+                        <a href="#">
+                            <img src="images/icons/reddit_icon2.svg" alt="reddit icon" title="reddit">
+                        </a>
+                    </li>
+                    <!-- Duolingo -->
+                    <li class="duolingo">
+                        <a href="https://www.duolingo.com/profile/cornel_ez" target="_blank" rel="noopener noreferrer">
+                            <img src="images/icons/duolingo-icon.svg" alt="duolingo icon" title="Duolingo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- In your HTML -->
+    <!-- Remove font-switcher from header and add to footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Ezra Nkala</p>
+            <div class="font-switcher">
+                <button class="font-toggle" aria-label="Toggle font style">
+                    <span class="font-icon">✎</span> <!-- Unicode pencil icon -->
+                </button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
